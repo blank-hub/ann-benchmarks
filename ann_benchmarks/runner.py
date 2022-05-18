@@ -263,6 +263,7 @@ def run_docker(definition, dataset, count, runs, timeout, batch, cpu_limit,
     finally:
         container.remove(force=True)
 
+
 def _handle_container_return_value(return_value, container, logger):
     base_msg = 'Child process for container %s' % (container.short_id)
     if type(return_value) is dict: # The return value from container.wait changes from int to dict in docker 3.0.0

@@ -173,6 +173,7 @@ def main():
     if args.algorithm:
         logger.info(f'running only {args.algorithm}')
         definitions = [d for d in definitions if d.algorithm == args.algorithm]
+        logger.info(f'definitions is {definitions[0].algorithm}')
 
     if not args.local:
         # See which Docker images we have available
