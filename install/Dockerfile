@@ -5,7 +5,7 @@ RUN apt-get install -y python3-numpy python3-scipy python3-pip build-essential g
 RUN pip3 install -U pip
 
 WORKDIR /home/app
-RUN git clone -b local https://github.com/blank-hub/ann-benchmarks
+RUN git clone -b local http://git.what996.com/blank-hub/ann-benchmarks
 #COPY requirements.txt run_algorithm.py ./
 RUN cd ann-benchmarks && pip3 install -r requirements.txt
 
@@ -13,7 +13,7 @@ RUN cd ann-benchmarks && pip3 install -r requirements.txt
 
 
 WORKDIR /home/app
-RUN git clone https://github.com/microsoft/SPTAG
+RUN git clone http://git.what996.com/microsoft/SPTAG
 RUN apt-get update && apt-get -y install wget build-essential libtbb-dev software-properties-common swig
 
 # cmake >= 3.12 is required
